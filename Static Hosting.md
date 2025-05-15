@@ -67,7 +67,7 @@ sudo nano /etc/nginx/nginx.conf
 sudo nginx -t
 ```
 ```bash
-sudo systemctl restart nginx
+sudo systemctl reload nginx
 ```
 
 Resolve 404 error
