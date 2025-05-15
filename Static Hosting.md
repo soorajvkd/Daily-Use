@@ -37,7 +37,7 @@ sudo mkdir -p /var/www/your_domain
 ```
 read and execute permissions
 ```bash
-sudo chown -R $USER:$USER /home/ubuntu/mplus
+sudo chown -R $USER:$USER /home/ubuntu/your_domain
 sudo chmod -R 755 /var/www/your_domain
 ```
 ```bash
