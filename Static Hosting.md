@@ -9,38 +9,39 @@
 Install my-project with npm
 
 ```bash
-    sudo apt update
-    sudo apt install nginx
+sudo apt update
+sudo apt install nginx
 ```
 ```bash
-    sudo ufw app list
+sudo ufw app list
 ```
 ```bash
-    systemctl status nginx
+systemctl status nginx
 ```
 ```bash
-    sudo systemctl start nginx
-    sudo systemctl stop nginx
-    sudo systemctl enable nginx
-    sudo systemctl disable nginx
-```
-
-```bash
-    sudo systemctl restart nginx
-```
-```bash
-    sudo systemctl reload nginx
+sudo systemctl start nginx
+sudo systemctl stop nginx
+sudo systemctl enable nginx
+sudo systemctl disable nginx
 ```
 
 ```bash
-    sudo mkdir -p /var/www/your_domain
+sudo systemctl restart nginx
+```
+```bash
+sudo systemctl reload nginx
+```
+
+```bash
+sudo mkdir -p /var/www/your_domain
 ```
 read and execute permissions
 ```bash
-    sudo chmod -R 755 /var/www/your_domain
+sudo chown -R $USER:$USER /home/ubuntu/mplus
+sudo chmod -R 755 /var/www/your_domain
 ```
 ```bash
-    sudo nano /etc/nginx/sites-available/your_domain
+sudo nano /etc/nginx/sites-available/your_domain
 ```
 ```bash
     server {
@@ -56,32 +57,32 @@ read and execute permissions
 }
 ```
 ```bash
-    sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
 ```
 ```bash
-    sudo nano /etc/nginx/nginx.conf
+sudo nano /etc/nginx/nginx.conf
 ```
 
 ```bash
-    sudo nginx -t
+sudo nginx -t
 ```
 ```bash
-    sudo systemctl restart nginx
+sudo systemctl restart nginx
 ```
 
 Resolve 404 error
 ```bash
-    sudo find /home/ubuntu/roocabs-static -type f -exec chmod 644 {} \;
+sudo find /home/ubuntu/roocabs-static -type f -exec chmod 644 {} \;
 ```
 ```bash
-    sudo chmod -R 755 /home/ubuntu/your_file
+sudo chmod -R 755 /home/ubuntu/your_file
 ```
 Check Error Log
 ```bash
-    sudo tail -n 50 /var/log/nginx/error.log
+sudo tail -n 50 /var/log/nginx/error.log
 ```
 ```bash
-    sudo chown -R www-data:www-data /home/ubuntu/roocabs-static
+sudo chown -R www-data:www-data /home/ubuntu/roocabs-static
 ```
 ```bash
     sudo nginx -t
